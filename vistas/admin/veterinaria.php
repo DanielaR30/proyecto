@@ -13,10 +13,10 @@ require 'header.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Veterinaria</title>
-	<link rel="stylesheet" href="css/estilos.css">
+	<!-- <link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-	<link rel="icon" type="image/png"href="favicon/icon.ico"/>
-  </head>
+	<link rel="icon" type="image/png"href="favicon/icon.ico"/> -->
+  </head> 
   <body style="background: url(../../public/img/fondoo.jpg) no-repeat; 
     background-attachment: fixed;
     background-size: cover;
@@ -26,37 +26,46 @@ require 'header.php';
 
 <br> <br> <br> <br>
 
-<div class="container bg-light mt-5 mb-5 w-50 rounded">
+<div class="container bg-light mt-5 mb-5 w-50 h-70 rounded">
 <div class="row">
 <div class="col mx-5 my-5">
 
-   <h1>Veterinaria</h1>
-     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregar">Agregar</button>
+   <h1><i class="fas fa-heartbeat"></i> Veterinaria</h1>
+     <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#agregar">Agregar</button>
      <hr>
      <!-- modal agregar -->
-             <div class="modal fade" id="agregar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-             <div class="modal-dialog modal-lg">
+             <div class="modal fade mt-5" id="agregar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+             <div class="modal-dialog modal-lg mt-5">
              <div class="modal-content">
 
                 
              <div class="container bg-light  rounded">
                       <div class="row">
                       <div class="col mx-5 my-5">
-            <h1>Agregar Veterinaria</h1>
+            <h1><i class="fas fa-heartbeat"></i> Veterinaria</h1>
+            <hr>
                 <form action="../../modelos/admin/Veterinaria.php?op=veterinaria" method="POST">
 
-                <p>
-                <label for="">Nombre</label>
-                <input type="text" name="nombre" placeholder="Infrese su nombre" required>
-                </p>
-                <p>
-                <label for="">Funcionario</label>
-                <input type="text" name="funcionario" placeholder="nombre funcionario" required>
-                </p>
-                
-                <button type="submit">Aceptar</button>
-              <button type="button" class="btn btn-secondary mr-3" data-dismiss="modal">Cerrar</button>
-            </form>
+                <div class="form-group w-75">
+                  <label for="">Nombre</label>
+                  <input type="text"
+                    class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="" required>
+                  <small id="helpId" class="form-text text-muted">Ingrese el nombre de la veterinaria</small>
+                </div>
+
+                <div class="form-group w-75">
+                  <label for="">Funcionario</label>
+                  <input type="text"
+                    class="form-control" name="funcionario" id="" aria-describedby="helpId" placeholder="" required>
+                  <small id="helpId" class="form-text text-muted">Ingrese el nombre del funcionario</small>
+                </div> 
+             
+                 
+            <button class="btn btn-outline-success" type="submit">Agregar</button>
+            <!-- <input class="btn btn-primary" type="reset" value="Reiniciar"> -->
+           <button type="button" class="btn btn-outline-danger btn" data-dismiss="modal">Cancelar</button>
+           
+          </form>
                 
     </div>            
       </div>
@@ -121,8 +130,8 @@ require 'header.php';
             <?php }?>
            </tbody>
     </table>
+    <a class="btn btn-outline-danger btn" href="atencion_edit.php" role="button">Cancelar</a> 
 
-    <button type="button" class="btn btn-light"><a href="atencion_edit.php" style="text-decoration: none;">cancelar</a> </button>
 </div>
 </div>
 </div>

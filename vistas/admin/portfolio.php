@@ -52,8 +52,8 @@ require 'header.php';
 
 
 
+        <a class="btn btn-success btn-sm" href="mascota_agr.php" role="button">Dar en adopción</a>
        
-        <button type="button" class="btn btn-light"><a href="mascota_agr.php" style="text-decoration: none;">Dar en adopción</a> </button>
           <hr>
           <!-- modal agregar MASCOTA-->
                

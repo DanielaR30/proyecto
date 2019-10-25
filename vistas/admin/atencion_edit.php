@@ -31,24 +31,27 @@ require 'header.php';
   <div class="container bg-light mt-5 mb-5 w-70 rounded">
      <div class="row">
       <div class="col mx-5 my-5">
-        <h1>Atención Médica</h1>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregar">Agregar</button>
-          <button type="button" class="btn btn-light"><a href="veterinaria.php" style="text-decoration: none;">Veterinarias</a> </button> <hr>
+        <h1><i class="fas fa-stethoscope"></i> Atención Médica</h1>
+     <br>
+          <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#agregar">Agregar</button>
+          <a class="btn btn-secondary btn-sm " href="veterinaria.php" role="button" >Veterinarias</a> 
+        <hr>
 
             <!-- modal agregar -->
-            <div class="modal fade" id="agregar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
+            <div class="modal fade mt-5" id="agregar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg mt-5">
                   <div class="modal-content">
 
                       <div class="container bg-light  rounded">
                       <div class="row">
                       <div class="col mx-5 my-5">
-                      <h1>Atención Médica</h1>
+                      <h1><i class="fas fa-stethoscope"></i> Atención Médica</h1>
                       <hr>
                           <form action="../../modelos/admin/Veterinaria.php?op=atencionmedica" method="POST">
-                            <p>
+
+                          <div class="form-group w-75">
                             <label for="">Veterinaria</label>
-                            <select name="veterinaria" id="">
+                            <select  class="form-control" name="veterinaria" id="">
                                 <?php
                                 $consulta="SELECT * FROM veterinaria";
                                 $resultado=mysqli_query($conexion, $consulta);
@@ -59,10 +62,11 @@ require 'header.php';
                                 }
                                 ?>
                             </select>
-                            </p>
-                              <p>
-                              <label for="">Mascota</label>
-                              <select name="mascota" id="">
+                          </div>
+
+                          <div class="form-group w-75">
+                            <label for="">Mascota</label>
+                            <select class="form-control" name="mascota" id="">
                                   <?php
                                   $consulta="SELECT * FROM mascota";
                                   $resultado=mysqli_query($conexion, $consulta);
@@ -73,21 +77,32 @@ require 'header.php';
                                   }
                                   ?>
                               </select>
-                              </p>
-                              <p>
-                                  <label for="">Fecha</label>
-                                  <input type="date" name="fecha" placeholder="Ingrese la fecha" required>
-                              </p>
-                              <p>
-                                  <label for="">Diagnostico</label>
-                                  <input type="text" name="diagnostico" placeholder="agregue un diagnostico" required>
-                              </p>
-                              <p>
-                                  <label for="">Tratamiento</label>
-                                  <input type="text" name="tratamiento" placeholder="agregue un tratamiento" required>
-                              </p>
-                                  <button type="submit">Registrar</button>
-                                  <button type="button" class="btn btn-light"><a href="atencion_edit.php" style="text-decoration: none;">Cancelar</a></button>
+                          </div>  
+
+                             <div class="form-group w-75">
+                                <label for="">Fecha</label>
+                                <input type="date"
+                                  class="form-control" name="fecha" id="" aria-describedby="helpId" placeholder="">
+                                <small id="helpId" class="form-text text-muted">Ingrese la fecha en la que la mascota recibe la atención médica</small>
+                              </div>
+
+                            <div class="form-group w-75">
+                              <label for="">Diagnóstico</label>
+                              <input type="text"
+                                class="form-control" name="diagnostico" id="" aria-describedby="helpId" placeholder="" required>
+                              <small id="helpId" class="form-text text-muted">Ingrese la condición de la salud de la mascota</small>
+                            </div>
+
+                              <div class="form-group w-75">
+                                <label for=""></i>Tratamiento</label>
+                                <input type="text"
+                                  class="form-control" name="tratamiento" id="" aria-describedby="helpId" placeholder="" required>
+                                <small id="helpId" class="form-text text-muted">Ingrese los medios cuya finalidad es la curación o el alivio de las enfermedades.</small>
+                              </div>
+                              
+                              <button class="btn btn-outline-success" type="submit">Registrar</button>
+                              <a class="btn btn-outline-danger btn" href="atencion_edit.php" role="button">Cancelar</a>
+                                 
                           </form>        
                       </div>            
                       </div>
@@ -95,8 +110,6 @@ require 'header.php';
                   </div>
                 </div>
               </div>
-
-
 
 
 

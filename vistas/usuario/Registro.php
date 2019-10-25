@@ -32,7 +32,7 @@ require 'header.php';
     <div class="row">
         <div class="col mx-5 my-5">
             
-        <h1>Registro</h1>
+        <h1><i class="fas fa-user-plus"></i> Registro</h1>
         <button type="button" class="btn btn-light"><a href="ciudad.php" style="text-decoration: none;">Agregar ciudad</a> </button>
         <hr>
             <form action="../../modelos/admin/Usuario.php?op=registro" method="POST">

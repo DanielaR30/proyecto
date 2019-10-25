@@ -12,7 +12,7 @@ require 'header.php';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Servicio Médico</title>
+    
   </head>
   <body style="background: url(../../public/img/fondo.jpg) no-repeat; 
     background-attachment: fixed;
@@ -27,7 +27,7 @@ require 'header.php';
     <div class="row">
         <div class="col mx-5 my-5">
 
-        <h1>Iniciar sesión</h1>
+        <h1><i class="fas fa-sign-in-alt"></i></i>  Iniciar sesión</h1>
         <button type="button" class="btn btn-light"><a href="Registro.php" style="text-decoration: none;">Registrarse</a> </button>
             <form action="../../modelos/admin/Usuario.php?op=ingreso" method="POST">
             <div class="form-group">
@@ -56,7 +56,7 @@ require 'header.php';
         </div>            
      </div>
   </div>
-  <br> <br> <br> <br>  
+  <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br> <br>
          <?php
 require 'footer.php';
 ?>

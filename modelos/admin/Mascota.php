@@ -3,8 +3,7 @@ include '../../config/Conexion.php';
 session_start(); 
 switch ($_GET["op"]) {
     case 'mascota':
-        $idraza=$_POST["idraza"];
-        $idadopcion=$_POST["idadopcion"];
+        $raza=$_POST["raza"];
         $especie=$_POST["especie"];
         $nombre=$_POST["nombre"];
         $edad=$_POST["edad"];
@@ -13,8 +12,8 @@ switch ($_GET["op"]) {
         $condicion=$_POST["condicion"];
         
          //Ejecutanto insercion a la base de datos
-        $insertar="INSERT INTO mascota(idraza, idadopcion, idrefugio, especie, nombre, edad, tamanio, genero, condicion) 
-                 VALUES ('$idraza', '$idadopcion','1','$especie' , '$nombre', '$edad', '$tamanio', '$genero', '1')";
+        $insertar="INSERT INTO mascota(idraza, idrefugio, especie, nombre, edad, tamanio, genero, condicion) 
+                 VALUES ('$raza', '1','$especie' , '$nombre', '$edad', '$tamanio', '$genero', '1')";
       
 
        $result=mysqli_query($conexion, $insertar);

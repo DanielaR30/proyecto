@@ -23,20 +23,26 @@ require 'header.php';
 
 <br> <br> <br> <br>
  
-  <div class="container bg-light mt-5 mb-5 w-50 rounded">
+  <div class="container bg-light mt-5 mb-5 w-50 h-50 rounded">
     <div class="row">
         <div class="col mx-5 my-5">
 
-        <h1>Agregar Raza</h1>
+        <h1>Raza</h1>
+        <hr>
             <form action="../../modelos/admin/Mascota.php?op=raza" method="POST">
 
-            <p>
-            <label for="">Nombre</label>
-            <input type="text" name="nombre" placeholder="Ingrese la raza" required>
-            </p>
+              <div class="form-group w-75">
+                <label for="">Nombre</label>
+                <input type="text"
+                  class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="" required>
+                <small id="helpId" class="form-text text-muted">Ingrese el nombre de la raza</small>
+              </div>
+
           
-			<button type="submit">Aceptar</button>
-			<button type="button" class="btn btn-light"><a href="mascota_agr.php" style="text-decoration: none;">Cancelar</a> </button>
+            <button class="btn btn-outline-success" type="submit">Agregar</button>
+            <a class="btn btn-outline-danger btn" href="mascota_agr.php" role="button">Cancelar</a> 
+
+			
         </form>
             
         </div>            

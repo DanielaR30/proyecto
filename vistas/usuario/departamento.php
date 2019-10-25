@@ -22,13 +22,17 @@ require 'header.php';
     background-position: fixed;">
 
 <br> <br> <br> <br>
+<div class="row">
+  <div class="col col-lg-3"></div>
+  <div class="col col-lg-6">
 
- 
-  <div class="container bg-light mt-5 mb-5 w-50 rounded">
+
+
+  <div class="container bg-light mt-5 mb-5  rounded">
     <div class="row">
-        <div class="col mx-5 my-5">
+        <div class="col mx-5 my-5 pb-2">
 
-        <h1>Seleccionar Departamento</h1>
+        <h1>Departamento</h1>
         <hr>
             <form action="../../modelos/admin/Usuario.php?op=departamento" method="POST">
             <?php
@@ -71,23 +75,36 @@ $tsDepartamentos = array(
 ); 
 
 ?>
-<p>
-<label for="">Nombre</label>
-<select name="nombre"> 
+
+<div class="form-group w-75">
+  <label for="">Nombre</label>
+  <select class="form-control" name="nombre"> 
 <?php 
 foreach($tsDepartamentos as $key => $departamento) {             
     echo '<option value="'.$departamento.'">'.$departamento.'</option>'."n";                 
 } 
 ?> 
 </select>
-</p>
-         
-            <button type="submit">Aceptar</button>
+<small id="helpId" class="form-text text-muted">Seleccione el nombre del departamento</small>
+</div>
+
+
+<button type="submit" class="btn btn-outline-success">Agregar</button>
+<a class="btn btn-outline-danger" href="ciudad.php" role="button">Cancelar</a>
+          
         </form>
             
         </div>            
      </div>
   </div>
+
+
+
+  </div>
+  <div class="col col-lg-3"></div>
+</div>
+ 
+  
   <br> <br> <br> <br>   <br>
          <?php
 require 'footer.php';

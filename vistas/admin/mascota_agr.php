@@ -25,29 +25,31 @@ require 'header.php';
     background-position: center center;
     height: 800px; 
     background-position: fixed;">
-
+<!-- @media only screen and (max-width: 1024px){ -->
 <br> <br> <br> <br>
- 
-  <div class="container bg-light mt-5 mb-5 w-50  rounded">
-    <div class="row">
-        <div class="col mx-5 my-5">
+ <div class="row"> 
+    <div class="col-lg-3"></div>
 
-        <h2>Mascota</h2>
+    <div class="col col-lg-6">
       
-        <a class="btn btn-outline-success btn-sm" href="raza.php" role="button">Agregar Raza</a>
-        <hr>
-      
-                  <form action="../../modelos/admin/Mascota.php?op=mascota" method="POST">
-        
-            <!-- <input type="file" name="imagen" style="border-radius:5px; color:#424141; width: 100%" required> -->
+      <div class="container bg-light mt-5 mb-5 rounded">
+      <div class="row">
+      <div class="col mx-5 my-5 pb-2">
+
+
+           <h2><i class="fas fa-dog"></i> Mascota</h2>
+            <a class="btn btn-success btn-sm" href="raza.php" role="button">Agregar Raza</a>
+            <hr>
+       <form action="../../modelos/admin/Mascota.php?op=mascota" method="POST">
+        <!-- <input type="file" name="imagen" style="border-radius:5px; color:#424141; width: 100%" required> -->
        
-            
+                
 
-
-            <p>
-            <label for="">Raza</label>
-            <select name="raza" id="">
-            <?php
+  
+    <div class="form-group w-75">
+      <label for="">Raza</label>
+      <select class="form-control" name="raza" id="">
+      <?php
             $consulta="SELECT * FROM raza";
             $resultado=mysqli_query($conexion, $consulta);
             while($mostrar=mysqli_fetch_array($resultado)){
@@ -56,39 +58,63 @@ require 'header.php';
             <?php
             }
             ?>
-            </select>
-            </p>
+      </select>
+    </div>
 
-            <p>
-            <label for="">Especie</label>
-            <input type="text" name="especie" placeholder="Ingrese la especie" required>
-            </p>
-            <p>
-            <label for="">Nombre</label>
-            <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
-            </p>
-            <p>
-            <label for="">Edad</label>
-            <input type="text" name="edad" placeholder="Edad en meses" required>
-            </p>
-
-            <p>
-            <label for="">Tamaño</label>
-            <input type="text" name="tamanio" placeholder="Ingrese el tamanio" required>
-            </p>
-
-            <p>
-            <label for="">Genero</label>
-            <input type="text" name="genero" placeholder="Ingrese el genero" required>
-            </p>
-            
-            
+    <div class="form-group w-75">
+              <label for="">Especie</label>
+                <select class="form-control" name="especie" id="">
+                  <option><i class="fas fa-dog"></i>Perro</option>
+                  <option>Gato</option>
+                
+                </select>
+            </div>
        
-            <button class="btn btn-outline-primary" type="submit">Agregar</button>
-            <!-- <button type="button" class="btn btn-light"><a href="portfolio.php" style="text-decoration: none;">Cancelar</a> </button>
-            <a class="btn btn-success btn-sm" href="raza.php" role="button">Agregar Raza</a> -->
-            <input class="btn btn-primary" type="reset" value="Reiniciar">
-            <a class="btn btn-outline-danger btn" href="portfolio.php" role="button">Cancelar</a>
+          
+            <!-- <input type="text" name="especie" placeholder="Ingrese la especie" required> -->
+         <div class="form-group w-75">
+           <label for="">Nombre</label>
+           <input type="text"
+             class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="" required>
+           <small id="helpId" class="form-text text-muted">nombre de la mascota</small>
+         </div>
+
+          <div class="form-group w-75">
+            <label for="">Edad/Meses</label>
+            <input type="text"
+              class="form-control" name="edad" id="" aria-describedby="helpId" placeholder="" required>
+            <small id="helpId" class="form-text text-muted">ingrese la edad en meses/ ejm: 4</small>
+          </div>
+
+          
+
+          <div class="form-group w-75">
+            <label for="">Tamaño</label>
+            <select class="form-control" name="tamanio" id="">
+              <option>Pequeño</option>
+              <option>Medio</option>
+              <option>Grande</option>
+            </select>
+          </div>
+
+
+          <div class="form-group w-75">
+            <label for="">Género</label>
+            <select class="form-control" name="genero" id="">
+              <option>Macho</option>
+              <option>Hembra</option>
+            </select>
+          </div>
+     <br>
+
+
+           
+            <button class="btn btn-outline-success" type="submit">Agregar</button>
+            <!-- <input class="btn btn-primary" type="reset" value="Reiniciar"> -->
+            <a class="btn btn-outline-danger btn" href="portfolio.php" role="button">Cancelar</a> 
+            
+<br>
+
         </form>        
                  
      
@@ -96,7 +122,16 @@ require 'header.php';
         </div>            
      </div>
   </div>
-  <br> <br> <br>
+
+  <div class="col-lg-3"></div>
+
+
+    </div>
+ </div>
+
+
+ 
+  <br> <br> 
  <?php
 require 'footer.php';
 ?>
