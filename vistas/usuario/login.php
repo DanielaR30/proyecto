@@ -28,30 +28,26 @@ require 'header.php';
         <div class="col mx-5 my-5">
 
         <h1><i class="fas fa-sign-in-alt"></i></i>  Iniciar sesión</h1>
-        <button type="button" class="btn btn-light"><a href="Registro.php" style="text-decoration: none;">Registrarse</a> </button>
+        <br>
+        <a class="btn btn-success btn-sm" href="Registro.php" role="button">Regístrate</a>
+<hr>
             <form action="../../modelos/admin/Usuario.php?op=ingreso" method="POST">
-            <div class="form-group">
-                      <input type="text" class="form-control" id="correo" name="correo" placeholder="correo">
-                      <!-- <span class="fa fa-user form-control-feedback"></span> -->
-                    </div>
-                    <div class="form-group ">
-                      <input type="password" Class="form-control" id="clave" name="clave" placeholder="Contraseña">
-                      <!-- <span class="fa fa-key form-control-feedback"></span> -->
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-8">
-                        
-                      </div><!-- /.col -->
-                      <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-                      </div><!-- /.col -->
-                    </div>
+           
+            <div class="form-group w-75">
+              <label for="">Correo</label>
+              <input type="text"
+                class="form-control" name="correo" id="correo" aria-describedby="helpId" placeholder="Ingrese su correo" required>
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
 
-
-
-          
-
-        </form>
+            <div class="form-group w-75">
+              <label for="">Contraseña</label>
+              <input type="password"
+                class="form-control" name="clave" id="clave" aria-describedby="helpId" placeholder="Ingrese su contraseña" required>
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <input class="btn btn-secondary " type="submit" value="Iniciar sesión">
+         </form>
             
         </div>            
      </div>

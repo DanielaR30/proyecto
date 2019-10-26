@@ -49,9 +49,9 @@ switch ($_GET["op"]) {
        $result=mysqli_query($conexion, $insertar);
 
         if(!$result){
-            echo "<script>alert('Error ');window.location= '../../vistas/admin/atencionmedica.php'</script>";
+            echo "<script>alert('Error ');window.location= '../../vistas/admin/atencion_edit.php'</script>";
         }else{
-            echo "<script>alert('Atencion agregada');window.location= '../../vistas/admin/atencionmedica.php'</script>";
+            echo "<script>window.location= '../../vistas/admin/atencion_edit.php' </script>";
         }
     break;
     

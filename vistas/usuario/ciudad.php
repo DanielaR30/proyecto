@@ -22,19 +22,28 @@ require 'header.php';
     background-position: fixed;">
 
 <br> <br> <br> <br>
- 
-  <div class="container bg-light mt-5 mb-5 w-50 rounded">
+
+<div class="row">
+  <div class="col-lg-3 "></div>
+  <div class="col-lg-6">
+
+
+
+
+  <div class="container bg-light mt-5 mb-5 rounded">
     <div class="row">
-        <div class="col mx-5 my-5">
+        <div class="col mx-5 my-5 pb-3">
 
         <h1>Ciudad</h1>
-        <button type="button" class="btn btn-light"><a href="departamento.php" style="text-decoration: none;">Agregar departamento</a> </button>
+        <br>
+        <a class="btn btn-secondary btn-sm" href="departamento.php" role="button">Agregar departamento</a>
+       
         <hr>
             <form action="../../modelos/admin/Usuario.php?op=ciudad" method="POST">
-            
-            <p>
-            <label for="">Departamento</label>
-            <select name="departamento" id="">
+           
+            <div class="form-group w-75">
+              <label for="">Departamento</label>
+              <select class="form-control" name="departamento" id="">
             <?php
             
             $consulta="SELECT * FROM departamento  ";
@@ -46,20 +55,33 @@ require 'header.php';
             }
             ?>
             </select>
-            </p>
+            <small id="helpId" class="form-text text-muted">Seleccione su departamento</small>
+            </div>
             
-            <p>
-            <label for="">Ciudad</label>
-            <input type="text" name="nombre" placeholder="Ingrese la ciudad" required>
-            </p>
-          
-            <button type="submit">Registrar</button>
+            <div class="form-group w-75">
+              <label for="">Ciudad</label>
+              <input type="text"
+                class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="" required>
+              <small id="helpId" class="form-text text-muted">Ingrese una nueva ciudad</small>
+            </div>
 
+            <button class="btn btn-outline-success" type="submit">Agregar</button>
+            <a class="btn btn-outline-danger" href="Registro.php" role="button">Cancelar</a>
+          
         </form>
             
         </div>            
      </div>
   </div>
+
+
+
+
+  </div>
+  <div class="col-lg-3"></div>
+</div> 
+
+
   <br> <br> <br> <br>   <br>
          <?php
 require 'footer.php';

@@ -33,12 +33,14 @@ require 'header.php';
         <div class="col mx-5 my-5">
             
         <h1><i class="fas fa-user-plus"></i> Registro</h1>
-        <button type="button" class="btn btn-light"><a href="ciudad.php" style="text-decoration: none;">Agregar ciudad</a> </button>
+        <br>
+        <a class="btn btn-secondary btn-sm" href="ciudad.php" role="button">Agregar ciudad</a>
         <hr>
             <form action="../../modelos/admin/Usuario.php?op=registro" method="POST">
-            <p>
-            <label for="">Ciudad</label>
-            <select name="ciudad" id="">
+
+            <div class="form-group w-75">
+              <label for="">Ciudad</label>
+              <select class="form-control" name="ciudad" id="">
             <?php
             $consulta="SELECT * FROM ciudad";
             $resultado=mysqli_query($conexion, $consulta);
@@ -49,35 +51,50 @@ require 'header.php';
             }
             ?>
             </select>
-            </p>
-            <p>
-            <label for="">Nombre</label>
-            <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
-            </p>
-            <p>
-            <label for="">Apellido</label>
-            <input type="text" name="apellido" placeholder="Ingrese su apellido" required>
-            </p>
+            <small id="helpId" class="form-text text-muted"> Seleccione su ciudad</small>
+            </div>
+          
+            <div class="form-group w-75">
+              <label for="">Nombre</label>
+              <input type="text"
+                class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="Ingrese su nombre" required>
+              <small id="helpId" class="form-text text-muted"> </small>
+            </div>
+            <div class="form-group w-75">
+              <label for="">Apellido</label>
+              <input type="text"
+                class="form-control" name="apellido" id="" aria-describedby="helpId" placeholder="Ingrese su apellido" required>
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group w-75">
+              <label for="">Cédula</label>
+              <input type="text"
+                class="form-control" name="cedula" id="" aria-describedby="helpId" placeholder="Ingrese su numero de cédula" required>
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group w-75">
+              <label for="">Teléfono</label>
+              <input type="text"
+                class="form-control" name="telefono" id="" aria-describedby="helpId" placeholder="Ingrese su numero de teléfono" required>
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group w-75">
+              <label for="">Correo</label>
+              <input type="email"
+                class="form-control" name="correo" id="" aria-describedby="helpId" placeholder="Ingrese su correo" required>
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group w-75">
+              <label for="">Contraseña</label>
+              <input type="text"
+                class="form-control" name="clave" id="" aria-describedby="helpId" placeholder="Ingrese su contraseña" required>
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
 
-            <p>
-            <label for="">Cedula</label>
-            <input type="text" name="cedula" placeholder="Ingrese su documento" required>
-            </p>
+            <button class="btn btn-outline-success" type="submit">Agregar</button>
+            <a class="btn btn-outline-danger" href="login.php" role="button">Cancelar</a>
 
-            <p>
-            <label for="">Telefono</label>
-            <input type="text" name="telefono" placeholder="Ingrese su telefono" required>
-            </p>
-            <p>
-            <label for="">Correo</label>
-            <input type="email" name="correo" placeholder="Ingrese su cooreo" required>
-            </p>
-            <p>
-            <label for="">Contraseña</label>
-            <input type="text" name="clave" placeholder="Ingrese su clave" required>
-            </p>
-            <button type="submit">Registrar</button>
-            <button type="button" class="btn btn-light"><a href="portfolio.php" style="text-decoration: none;">Cancelar</a> </button>
+           
          
          
         </form>

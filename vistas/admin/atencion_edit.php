@@ -45,9 +45,9 @@ require 'header.php';
                       <div class="container bg-light  rounded">
                       <div class="row">
                       <div class="col mx-5 my-5">
-                      <h1><i class="fas fa-stethoscope"></i> Atención Médica</h1>
-                      <hr>
-                          <form action="../../modelos/admin/Veterinaria.php?op=atencionmedica" method="POST">
+                        <h1><i class="fas fa-stethoscope"></i> Atención Médica</h1>
+                        <hr>
+                            <form action="../../modelos/admin/Veterinaria.php?op=atencionmedica" method="POST">
 
                           <div class="form-group w-75">
                             <label for="">Veterinaria</label>
@@ -112,9 +112,8 @@ require 'header.php';
               </div>
 
 
-
                          <!-- listar -->
-                         <table class="table table-borderless">
+       <table class="table table-borderless">
               <thead>
                  <tr>
                     <th>Veterinaria</th>

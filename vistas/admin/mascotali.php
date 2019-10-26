@@ -77,14 +77,7 @@ require 'header.php';
                 <th>Genero</th>
                 <td><?php echo $mostrar['genero']?></td>
                 </tr>
-                <tr>
-                <th>Ubicación</th>
-                <td><?php echo $mostrar['ubicacion']?></td>
-                </tr>
-                <tr>
-                <th>Descripcion</th>
-                <td><?php echo $mostrar['descripcion']?></td>
-                </tr>
+               
             <tr>
             <th>Opciones</th>
                 <td style="padding: 10px; text-align: center">

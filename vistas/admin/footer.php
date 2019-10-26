@@ -7,7 +7,7 @@ require '../../config/Conexion.php'
  <br> <br> <br> <br> <br> <br>
     <!-- START: Footer -->
 
-        <footer class="nk-footer relative-bottom">
+        <footer class="nk-footer">
 
 
             <div class="nk-footer-cont">

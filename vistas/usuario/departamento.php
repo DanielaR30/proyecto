@@ -30,7 +30,7 @@ require 'header.php';
 
   <div class="container bg-light mt-5 mb-5  rounded">
     <div class="row">
-        <div class="col mx-5 my-5 pb-2">
+        <div class="col mx-5 my-5 pb-3">
 
         <h1>Departamento</h1>
         <hr>
@@ -105,7 +105,7 @@ foreach($tsDepartamentos as $key => $departamento) {
 </div>
  
   
-  <br> <br> <br> <br>   <br>
+  <br> <br> <br> <br>   <br> <br> <br> <br> <br> <br>
          <?php
 require 'footer.php';
 ?>

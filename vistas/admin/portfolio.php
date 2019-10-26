@@ -79,7 +79,7 @@ require 'header.php';
                             <div class="card" style="width: 18rem;">
                               <img class="card-img-top" src="../../public/img/<?php echo $mostrar['imagen']?>" alt=" Card image cap <?php echo $mostrar['nombre']?>" width="100%">
                          
-                                 <a href="mascotali.php" class="btn btn-primary">Ver más</a>
+                                 <a href="mascotali.php" class="btn btn-dark">Ver más</a>
                                 
                              </div>
                         </div>

@@ -1,5 +1,5 @@
 <?php
-require '../../config/Conexion.php'
+require 'header.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,7 +24,7 @@ require '../../config/Conexion.php'
     background-position: fixed;"
     >
    
-
+<br> <br> <br> <br>
  
   <div class="container bg-light mt-5 mb-5 w-50 rounded">
     <div class="row">
@@ -34,9 +34,10 @@ require '../../config/Conexion.php'
         
         <hr>
             <form action="../../modelos/admin/Mascota.php?op=foto" method="POST">
-            <p>
-            <label for="">Mascota</label>
-            <select name="mascota" id="">
+            
+            <div class="form-group w-75">
+              <label for="">Macotas</label>
+              <select class="form-control" name="mascota" id="">
             <?php
             $consulta="SELECT * FROM mascota";
             $resultado=mysqli_query($conexion, $consulta);
@@ -47,20 +48,25 @@ require '../../config/Conexion.php'
             }
             ?>
             </select>
-            </p>
+            </div>
 
-            <p>
-            <label for="">Foto</label>
-            <input type="file" name="imagen" style="border-radius:5px; color:#424141; width: 100%" required>
-            </p>
-            
-            <button type="submit">Agregar</button>
-            <button type="button" class="btn btn-light"><a href="mascota.php" style="text-decoration: none;">Cancelar</a> </button>
+            <div class="form-group w-75">
+            <label for="foto">Foto</label>
+            <input type="file" name="imagen" class="form-control-file" id="foto" required>
+            </div>
+
+            <button class="btn btn-outline-success" type="submit">Agregar</button>
+            <a class="btn btn-outline-danger" href="mascota_agr.php" role="button">Cancelar</a>
+
         </form>
             
         </div>            
      </div>
   </div>
+<br> <br> <br> <br> <br>
+<?php
+require 'footer.php';
+?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
